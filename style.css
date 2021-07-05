@@ -44,7 +44,7 @@ body{
     top: 35px;
     border-radius: 5px;
     color: #FFFFFF;
-
+    border: none;
 
     padding: 10px 20px;
 }
@@ -65,7 +65,6 @@ body{
 .title_intro{
     width: 665px;
     height: 164px;
-    margin-left: 122px;
     top: 200px;
 
     font-family: Manrope;
@@ -74,11 +73,12 @@ body{
     font-size: 64px;
     line-height: 82px;
 }
+.container{
+    padding-left: 122px;
+}
 .text_intro{
     width: 650px;
     height: 99px;
-    margin-left: 122px;
-    top: 384px;
 
     font-family: Manrope;
     font-style: normal;
@@ -89,25 +89,56 @@ body{
     letter-spacing: 0.2px;
 }
 .mail_input{
-    width: 320px;
-    height: 73px;
-     margin-left: 122px;
-    top: 533px;
-
-    background: #FFFFFF;
-    border-radius: 8px;
     font-size: 16px;
     padding-left: 32px;
-    padding-right: 146px;
+    padding-right: 202px;
+    width: 300px;
+    height: 73px;
+    left: 122px;
+
+    border-radius: 8px;
+    border-style: none;
 }
 .button_for_input{
-
+    position: relative;
+    left: -147px;
+    background-color: #F84646;
     width: 136px;
     height: 61px;
-    left: 482px;
-    top: 539px;
-
-    background: #F84646;
     border-radius: 8px;
+    border: none;
+    color: #FFFFFF;
+}
+/*Section*/
+.title_text{
+    height: 56px;
+    left: 506px;
+    top: 874px;
 
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    margin-top: 120px;
+}
+.text{
+    width: 994px;
+    height: 109px;
+    left: 223px;
+    top: 960px;
+
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 39px;
+    margin: 0 auto;
+
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+.images{
+    margin-top: 98px
 }
