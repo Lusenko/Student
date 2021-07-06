@@ -140,5 +140,22 @@ body{
     letter-spacing: 0.2px;
 }
 .images{
-    margin-top: 98px
+
+    margin: 0 144px 0 143px;
+    margin-top: 98px;
+
+    grid-column-gap: 116px;
+    grid-row-gap: 83px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.files{
+    width: 298px;
+    text-align: center;
+}
+@media only screen and (max-width: 1268px){
+    .images{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
