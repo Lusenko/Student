@@ -338,3 +338,51 @@ body{
         flex-direction: column;
     }
 }
+
+/*Ad*/
+.ad{
+    margin-top: 160px;
+    height: 603px;
+    background-color: #F4F5F7;
+    color: #18191F;
+}
+.block{
+    width: 1100px;
+    margin: 0 auto;
+}
+.title_ad{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 19px;
+}
+.title_ad h1{
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 64px;
+    margin-bottom: 20px;
+}
+.text_ad{
+    margin: 0 auto;
+    text-align: center;
+}
+.text_ad p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+}
+.block_with_img{
+    display: flex;
+    align-items: center;
+}
+.block_with_img img{
+    margin-bottom: -40px;
+}
+/*.third_img img{
+    margin-bottom: -40px;
+}
+.second_img img{
+    margin-bottom: -40px;
+}
+.fourth_img img{
+    ma
+}*/
