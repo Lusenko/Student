@@ -25,6 +25,7 @@ body{
     margin-right: 122px;
 }
 .menu li {
+    margin-left: auto;
     list-style-type: none;
     font-size: 14px;
 }
@@ -32,7 +33,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: auto;
 }
 .nav_link{
     color: black;
@@ -52,6 +52,8 @@ body{
 
     padding: 10px 20px;
 }
+
+
 /*Intro*/
 .intro{
     flex-direction: column;
@@ -65,9 +67,7 @@ body{
     margin-bottom: 40px;
 }
 .title_intro{
-    width: 600px;
-    height: 164px;
-    top: 200px;
+    width: 50%;
 
     font-style: normal;
     font-weight: 800;
@@ -163,18 +163,6 @@ body{
     width: 100%;
     text-align: center;
 }
-@media only screen and (max-width: 1268px){
-    .images{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media only screen and (max-width: 500px){
-    .images{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
 .img_file{
     position: relative;
 }
@@ -253,7 +241,7 @@ body{
 .first_news{
     display: flex;
     flex-direction: row;
-    width: 1024px;
+    width: 1250px;
     margin: 0 auto;
 }
 .text_block_1 h1{
@@ -294,7 +282,7 @@ body{
 .second_news{
     display: flex;
     flex-direction: row;
-    width: 1024px;
+    width: 1250px;
     margin: 0 auto;
 }
 .text_block_2{
@@ -332,11 +320,6 @@ body{
 }
 .news_img_2{
     margin-top: 120px;
-}
-@media only scrren and (max-width: 500px){
-    .first_news{
-        flex-direction: column;
-    }
 }
 
 /*Ad*/
@@ -377,12 +360,267 @@ body{
 .block_with_img img{
     margin-bottom: -40px;
 }
-/*.third_img img{
-    margin-bottom: -40px;
+/*User*/
+.users_block{
+    width: 1024px;
+    margin: 0 auto;
 }
-.second_img img{
-    margin-bottom: -40px;
+.user {
+    text-align: center;
+    margin-top: 166px;
 }
-.fourth_img img{
-    ma
-}*/
+.user_img{
+    position: relative;
+}
+.ellipse{
+    margin: 0 0 55px -70px;
+}
+.user_title{
+    font-size: 48px;
+    line-height: 32px;
+    font-weight: 800;
+
+    text-align: center;
+}
+.user_title h1{
+    margin-top: 37px;
+}
+.user_text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+
+    font-style: normal;
+    text-align: center;
+}
+.user_text p{
+    margin-top: 10px;
+}
+.user_button{
+    text-align: center;
+    margin-top: 30px;
+}
+.user_btn{
+    width: 204px;
+    height: 70px;
+    left: 617px;
+    top: 4590px;
+
+    background: #F84646;
+    border-radius: 8px;
+
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 20px;
+    border: none;
+}
+/*Footer*/
+.footer{
+    background: #F8464A;
+    height: 536px;
+    margin-top: 185px;
+}
+.footer_link{
+    width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.text_ul{
+    padding: 0;
+}
+.link h4{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-top: 80px;
+}
+.link_text li{
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+
+}
+.text_link{
+    text-decoration: none;
+    color: #E6E6E6;
+}
+.down_text{
+    display: flex;
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    align-items: center;
+    font-size: 16px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+.text_d{
+    margin-left: auto;
+}
+/*Media*/
+@media only screen and (min-width: 501px){
+    .nav{
+        margin-left: auto;
+    }
+}
+@media only screen and (min-width: 501px){
+    .nav{
+        margin-left: auto;
+    }
+}
+@media only screen and (max-width: 1268px){
+    .images{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 500px){
+    .images{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media only scrren and (max-width: 551px){
+    .first_news{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 500px){
+    /*Header*/
+    .menu{
+        flex-direction: column;
+    }
+    .title_intro{
+        width: 335px;
+        font-size: 42px;
+        line-height: 57px;
+        text-align: center;
+
+    }
+    .intro{
+        height: 601px;
+        background-size: 100% 100%;
+        width: 500px;
+        margin: 0 auto;
+    }
+    .text_intro{
+        width: 335px;
+        font-size: 12px;
+        line-height: 23px;
+        text-align: center;
+    }
+    .nav{
+        justify-content: center;
+        margin-right: auto;
+        align-items: flex-start;
+    }
+    .mail_input{
+        width: 245px;
+        height: 60px;
+        padding-right: 100px;
+    }
+    .button_for_input{
+        width: 90px;
+        height: 50px;
+
+    }
+    .mail_form{
+        margin-top: -20px;
+    }
+    /*Section*/
+    .title_in_section{
+        width: 500px;
+        margin: 0 auto;
+    }
+    .title_text{
+        margin-top: 60px;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 32px;
+    }
+    .text{
+        width: 334px;
+        margin-top: -30px;
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .images{
+        width: 500px;
+        margin: 0 auto;
+    }
+    /*Red Container*/
+    .red_container{
+        width: 500px;
+        height: 836px;
+    }
+    .title_con{
+        font-size: 36px;
+        line-height: 47px;
+    }
+    .title_text{
+        font-size: 14px;
+        line-height: 32px;
+    }
+    .container_1{
+        width: 500px;
+        margin: 0 auto;
+    }
+    .all_text_con{
+        width: 500px;
+        padding-left: 0;
+        margin-top: 80px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .text_1{
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .text_1 img{
+        width: 27px;
+        transform: rotate(90deg);
+        margin: 0 auto;
+    }
+    .text_1 p{
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    /*News*/
+    .first_news{
+        flex-direction: column;
+    }
+    .text_block_1{
+        order: 2;
+        width: 500px;
+    }
+    .text_block_1 h1{
+        font-size: 36px;
+        line-height: 41px;
+
+        text-align: center;
+        margin: 0 auto;
+    }
+    .text_block_1 p{
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .news_img_1{
+        width: 335px;
+        height: 312px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .img_block_1{
+        width: 500px;
+        margin-top: -70px;
+        order: 1;
+    }
+}
