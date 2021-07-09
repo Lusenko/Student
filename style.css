@@ -7,17 +7,101 @@ body{
     margin: 0 auto;
 }
 /*Header*/
-.header{
+.headerImg{
+    background-size: cover;
+    background: url("image/Rectangle 1.png") no-repeat center;
+}
+.container{
+    width: 100%;
+}
+.sectionHeader{
     width: 1400px;
     margin: 0 auto;
-    left: 0;
-    top: 0;
-    right: 0;
 }
 .header_inner{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
+/*******************************************/
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+    visibility: hidden;
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+/* контейнер меню */
+.menu__box {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: white;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+/*******************************************/
 .menu{
     display: flex;
     align-items: center;
@@ -38,6 +122,70 @@ body{
     color: black;
     text-decoration: none;
     margin: 0 40px;
+}
+.btn1{
+    background-color: #F84646;
+    width: 91px;
+    height: 40px;
+    margin-left: 40px;
+    top: 20px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+.headerInfo{
+    padding-left: 122px;
+    margin-top: 140px;
+}
+.hText{
+    width: 665px;
+    height: 164px;
+    top: 160px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 82px;
+}
+
+.hText1{
+    width: 650px;
+    height: 99px;
+
+    margin-top: -35px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.2px;
+    color: #000000;
+}
+.inputText{
+    margin-top: 35px;
+    font-size: 16px;
+    padding-left: 32px;
+    padding-right: 202px;
+    width: 300px;
+    height: 73px;
+    left: 122px;
+    border-radius: 8px;
+    border-style: none;
+}
+.btn2{
+    position: relative;
+    left: -147px;
+    background-color: #F84646;
+    width: 136px;
+    height: 61px;
+    border-radius: 8px;
+    border: none;
+    color: #FFFFFF;
 }
 /*Button*/
 .button1{
@@ -89,18 +237,18 @@ body{
     margin-top: 20px;
     letter-spacing: 0.2px;
 }
-.mail_input{
+.inputText{
+    margin-top: 35px;
     font-size: 16px;
     padding-left: 32px;
     padding-right: 202px;
     width: 300px;
     height: 73px;
     left: 122px;
-
     border-radius: 8px;
     border-style: none;
 }
-.button_for_input{
+.btn2{
     position: relative;
     left: -147px;
     background-color: #F84646;
@@ -463,78 +611,157 @@ body{
     margin-left: auto;
 }
 /*Media*/
-@media only screen and (min-width: 501px){
-    .nav{
-        margin-left: auto;
-    }
-}
-@media only screen and (min-width: 501px){
-    .nav{
-        margin-left: auto;
-    }
-}
 @media only screen and (max-width: 1268px){
     .images{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 576px){
     .images{
         display: grid;
         grid-template-columns: 1fr;
     }
 }
-@media only scrren and (max-width: 551px){
-    .first_news{
-        flex-direction: column;
-    }
-}
-@media only screen and (max-width: 500px){
+
+@media only screen and (max-width: 576px){
     /*Header*/
-    .menu{
-        flex-direction: column;
-    }
-    .title_intro{
+    .sectionHeader{
         width: 335px;
+    }
+    .nav{
+        display: none;
+    }
+    /*******************************************/
+    /* скрываем чекбокс */
+    #menu__toggle {
+        opacity: 0;
+    }
+    /* стилизуем кнопку */
+    .menu__btn {
+        visibility: visible;
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    /* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    /* контейнер меню */
+    .menu__box {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: white;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    }
+    /* элементы меню */
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+    }
+    /*******************************************/
+
+    .input_Button{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .inputText{
+        padding-left: 21px;
+        width: 150px;
+        height: 60px;
+        padding-right: 164px;
+        font-size: 14px;
+    }
+
+    .headerImg{
+        height: 601px;
+    }
+    .headerInfo{
+        margin-top: 40px;
+        padding-left: 0;
+    }
+
+    .hText{
+        margin-top: 5px;
+        width: 335px;
+        height: 160px;
+        font-weight: 800;
         font-size: 42px;
         line-height: 57px;
         text-align: center;
+    }
 
-    }
-    .intro{
-        height: 601px;
-        background-size: 100% 100%;
-        width: 500px;
-        margin: 0 auto;
-    }
-    .text_intro{
+    .hText1{
         width: 335px;
+        height: 87px;
         font-size: 12px;
         line-height: 23px;
         text-align: center;
+        margin-top: 30px;
     }
-    .nav{
-        justify-content: center;
-        margin-right: auto;
-        align-items: flex-start;
-    }
-    .mail_input{
-        width: 245px;
-        height: 60px;
-        padding-right: 100px;
-    }
-    .button_for_input{
+
+    .btn2{
+        top: -57px;
         width: 90px;
         height: 50px;
-
-    }
-    .mail_form{
-        margin-top: -20px;
+        left: 115px;
     }
     /*Section*/
     .title_in_section{
-        width: 500px;
+        width: 100%;
         margin: 0 auto;
     }
     .title_text{
@@ -550,12 +777,12 @@ body{
         line-height: 22px;
     }
     .images{
-        width: 500px;
+        width: 100%;
         margin: 0 auto;
     }
     /*Red Container*/
     .red_container{
-        width: 500px;
+        width: 100%;
         height: 836px;
     }
     .title_con{
@@ -567,11 +794,11 @@ body{
         line-height: 32px;
     }
     .container_1{
-        width: 500px;
+        width: 100%;
         margin: 0 auto;
     }
     .all_text_con{
-        width: 500px;
+        width: 100%;
         padding-left: 0;
         margin-top: 80px;
         flex-direction: column;
@@ -595,32 +822,163 @@ body{
     }
     /*News*/
     .first_news{
+        width: 100%;
+        text-align: center;
         flex-direction: column;
     }
     .text_block_1{
         order: 2;
-        width: 500px;
+        width: 100%;
     }
     .text_block_1 h1{
         font-size: 36px;
         line-height: 41px;
 
+        width: 70%;
         text-align: center;
         margin: 0 auto;
     }
     .text_block_1 p{
+        width: 70%;
+        padding: 20px 0 40px 0;
         font-size: 14px;
         line-height: 28px;
+        text-align: center;
+        margin: 0 auto;
     }
     .news_img_1{
         width: 335px;
         height: 312px;
-        margin-left: auto;
-        margin-right: auto;
     }
     .img_block_1{
-        width: 500px;
+        text-align: center;
+        width: 100%;
         margin-top: -70px;
         order: 1;
+    }
+    .button_news_1{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .second_news{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .text_block_2{
+        order: 2;
+        width: 100%;
+        padding: 0;
+    }
+    .text_block_2 h1{
+        font-size: 36px;
+        line-height: 41px;
+
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .text_block_2 p{
+        width: 70%;
+        padding: 20px 0 40px 0;
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .news_img_2{
+        width: 335px;
+        height: 312px;
+    }
+    .img_block_2{
+        text-align: center;
+        width: 100%;
+        margin-top: -70px;
+        order: 1;
+    }
+    .button_news_2{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    /*Ad*/
+    .block{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .title_ad h1{
+        font-size: 36px;
+        line-height: 41px;
+    }
+    .text_ad{
+        font-size: 14px;
+        line-height: 32px;
+    }
+    .block_with_img{
+        width: 250px;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .ad{
+        height: 991px;
+    }
+    .fourth_img{
+        display: none;
+    }
+    .second_news{
+
+    }
+    .fifth_img{
+        display: none;
+    }
+    .first_img{
+        margin-bottom: 60px;
+    }
+    /*Users*/
+    .users_block{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .user_title h1{
+        font-size: 36px;
+        line-height: 32px;
+    }
+    .user_text p{
+        width: 70%;
+        font-size: 14px;
+        line-height: 25px;
+        margin: 0 auto;
+    }
+    .user_btn{
+        width: 124px;
+        height: 42px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+    /*Footer*/
+    .footer{
+        height: 1340px;
+        width: 100%;
+    }
+    .footer_link{
+        width: 90%;
+        grid-template-columns: 1fr;
+        padding-left: 20px
+    }
+    .down_text{
+        width: 100%;
+        flex-direction: column;
+    }
+    .down_text p{
+        order: 2;
+        padding-right: 200px;
+    }
+    .text_d{
+        order: 1;
+        padding: 0 300px 67px 0;
     }
 }
