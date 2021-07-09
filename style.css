@@ -7,9 +7,12 @@ body{
     margin: 0 auto;
 }
 /*Header*/
+
 .headerImg{
+    max-width: 100%;
+    background: url("image/Rectangle 1.png");
     background-size: cover;
-    background: url("image/Rectangle 1.png") no-repeat center;
+    height: 754px;
 }
 .container{
     width: 100%;
@@ -23,15 +26,13 @@ body{
     justify-content: flex-end;
 }
 /*******************************************/
-/* скрываем чекбокс */
 #menu__toggle {
     opacity: 0;
 }
-/* стилизуем кнопку */
 .menu__btn {
     visibility: hidden;
-    display: flex; /* используем flex для центрирования содержимого */
-    align-items: center;  /* центрируем содержимое кнопки */
+    display: flex;
+    align-items: center;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -40,7 +41,6 @@ body{
     cursor: pointer;
     z-index: 1;
 }
-/* добавляем "гамбургер" */
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -58,7 +58,7 @@ body{
     content: '';
     top: 8px;
 }
-/* контейнер меню */
+
 .menu__box {
     display: block;
     position: absolute;
@@ -73,7 +73,6 @@ body{
     background-color: white;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
 }
-/* элементы меню */
 .menu__item {
     display: block;
     padding: 12px 24px;
@@ -146,7 +145,6 @@ body{
     width: 665px;
     height: 164px;
     top: 160px;
-    font-family: Manrope;
     font-style: normal;
     font-weight: 800;
     font-size: 64px;
@@ -158,7 +156,6 @@ body{
     height: 99px;
 
     margin-top: -35px;
-    font-family: Manrope;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -200,7 +197,17 @@ body{
 
     padding: 10px 20px;
 }
-
+.button_1_1{
+    background-color: #F84646;
+    width: 91px;
+    height: 40px;
+    top: 35px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: none;
+    display: none;
+    padding: 10px 20px;
+}
 
 /*Intro*/
 .intro{
@@ -265,8 +272,6 @@ body{
 }
 .title_text{
     height: 56px;
-    left: 506px;
-    top: 874px;
 
     font-style: normal;
     font-weight: 800;
@@ -612,11 +617,19 @@ body{
     margin-left: auto;
 }
 /*Media*/
-@media only screen and (max-width: 1268px){
+@media only screen and (max-width: 768px){
+    .sectionHeader{
+        width: 100%;
+    }
     .images{
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .title_text{
+        width: 100%;
+    }
+
 }
 @media only screen and (max-width: 576px){
     .images{
@@ -634,15 +647,13 @@ body{
         display: none;
     }
     /*******************************************/
-    /* скрываем чекбокс */
     #menu__toggle {
         opacity: 0;
     }
-    /* стилизуем кнопку */
     .menu__btn {
         visibility: visible;
-        display: flex; /* используем flex для центрирования содержимого */
-        align-items: center;  /* центрируем содержимое кнопки */
+        display: flex;
+        align-items: center;
         position: fixed;
         top: 20px;
         left: 20px;
@@ -651,7 +662,6 @@ body{
         cursor: pointer;
         z-index: 2;
     }
-    /* добавляем "гамбургер" */
     .menu__btn > span,
     .menu__btn > span::before,
     .menu__btn > span::after {
@@ -754,7 +764,11 @@ body{
         text-align: center;
         margin-top: 30px;
     }
-
+    .button_1_1{
+        display: block;
+        position: relative;
+        left: 230px
+    }
     .btn2{
         top: -57px;
         width: 90px;
@@ -978,10 +992,10 @@ body{
     }
     .down_text p{
         order: 2;
-        padding-right: 230px;
+        padding-right: 60px;
     }
     .text_d{
         order: 1;
-        padding: 0 340px 67px 0;
+        padding: 0 160px 67px 0;
     }
 }
