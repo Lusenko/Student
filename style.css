@@ -122,23 +122,14 @@ body{
     text-decoration: none;
     margin: 0 40px;
 }
-.btn1{
-    background-color: #F84646;
-    width: 91px;
-    height: 40px;
-    margin-left: 40px;
-    top: 20px;
-    border-radius: 5px;
-    color: #FFFFFF;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
+.nav_link:hover{
+    color: rgb(135, 135, 135);
+}
+.nav_link:hover:after{
+    display: block;
 }
 .headerInfo{
-    padding-left: 122px;
+    padding: 0 122px;
     margin-top: 140px;
 }
 .hText{
@@ -174,7 +165,7 @@ body{
     border-radius: 8px;
     border-style: none;
 }
-.btn2{
+.button2{
     position: relative;
     left: -147px;
     background-color: #F84646;
@@ -183,6 +174,10 @@ body{
     border-radius: 8px;
     border: none;
     color: #FFFFFF;
+}
+.button2:hover{
+    background: #971919;
+    cursor: pointer;
 }
 /*Button*/
 .button1{
@@ -196,6 +191,10 @@ body{
     border: none;
 
     padding: 10px 20px;
+}
+.button1:hover{
+    background: #971919;
+    cursor: pointer;
 }
 .button_1_1{
     background-color: #F84646;
@@ -255,7 +254,7 @@ body{
     border-radius: 8px;
     border-style: none;
 }
-.btn2{
+.button2{
     position: relative;
     left: -147px;
     background-color: #F84646;
@@ -375,7 +374,7 @@ body{
     margin-top: 10px;
 }
 .all_text_con{
-    padding-left: 50px;
+    padding: 0 50px;
     margin: 0 auto;
     margin-top: 50px;
     display: flex;
@@ -430,6 +429,10 @@ body{
     background: #F84646;
     border-radius: 8px;
 }
+.button_news_1:hover{
+    background: #971919;
+    cursor: pointer;
+}
 .news_img_1{
     margin-top: 150px;
 }
@@ -471,6 +474,10 @@ body{
     color: #FFFFFF;
     background: #F84646;
     border-radius: 8px;
+}
+.button_news_2:hover{
+    background: #971919;
+    cursor: pointer;
 }
 .news_img_2{
     margin-top: 120px;
@@ -570,6 +577,10 @@ body{
     line-height: 20px;
     border: none;
 }
+.user_btn:hover{
+    background: #971919;
+    cursor: pointer;
+}
 /*Footer*/
 .footer{
     background: #F8464A;
@@ -581,6 +592,9 @@ body{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.text_link:hover{
+    color: rgb(135, 135, 135);
 }
 .text_ul{
     padding: 0;
@@ -617,9 +631,13 @@ body{
     margin-left: auto;
 }
 /*Media*/
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1024px){
+    /*Header*/
     .sectionHeader{
         width: 100%;
+    }
+    .nav_lin{
+        margin: 0 10px;
     }
     .images{
         width: 100%;
@@ -629,7 +647,120 @@ body{
     .title_text{
         width: 100%;
     }
+    .hText{
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 73px;
+    }
+    .hText1{
+        font-size: 16px;
+        line-height: 28px;
+        width: 565px;
+    }
+    .inputText{
+        padding-left: 21px;
+        width: 220px;
+        height: 60px;
+        padding-right: 164px;
+        font-size: 14px;
+    }
+    .button2{
+        width: 114px;
+        height: 50px;
+    }
+    /*Images*/
+    .images p{
+        padding: 0 70px;
+    }
+    /*Red Container*/
+    .title_in_section{
+        width: 100%;
+    }
+    .container_1{
+        width: 100%;
+    }
+    .all_text_con{
+       padding: 0 160px;
+    }
+    .text_c{
+        margin-left: 20px;
+    }
+    .text_v{
+        margin-right: 10px;
+    }
+    .title_con{
+        width: 100%;
+    }
+    .text_1 p{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .text_1 img{
+        width: 28px;
+    }
+    .text_1{
+        width: 170px;
+    }
+    .tex{
+        margin: 0;
+    }
+    /*News*/
+    .news{
+        padding: 0 60px;
+    }
+    .first_news{
+        width: 100%;
+    }
+    .second_news{
+        width: 100%;
+    }
+    .news img{
 
+        width: 424px;
+        height: 404px;
+    }
+    .news h1{
+        font-size: 58px;
+        margin-bottom: 20px;
+    }
+    .news p{
+        font-size: 14px;
+    }
+    .news button{
+        margin-top: 32px;
+    }
+    .text_block_2{
+        padding-left: 56px;
+    }
+    /*Ad*/
+    .block{
+        width: 100%;
+    }
+    .second_img{
+        margin-left: -25px;
+    }
+    .third_img{
+        margin-left: -25px;
+    }
+    .fourth_img{
+        margin-left: -25px;
+    }
+    /*User*/
+    .user_title h1{
+        font-size: 48px;
+        line-height: 32px;
+    }
+    /*Footer*/
+    .footer_link{
+        max-width: 100%;
+    }
+    .lin{
+        padding-left: 30px;
+    }
+    .down_text{
+        max-width: 94%;
+        padding: 0 30px;
+    }
 }
 @media only screen and (max-width: 576px){
     .images{
@@ -769,7 +900,7 @@ body{
         position: relative;
         left: 230px
     }
-    .btn2{
+    .button2{
         top: -57px;
         width: 90px;
         height: 50px;
