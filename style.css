@@ -18,7 +18,7 @@ body{
     width: 100%;
 }
 .sectionHeader{
-    width: 1400px;
+    max-width: 100%;
     margin: 0 auto;
 }
 .header_inner{
@@ -108,9 +108,10 @@ body{
     margin-right: 122px;
 }
 .menu li {
-    margin-left: auto;
     list-style-type: none;
     font-size: 14px;
+    text-align: center;
+    flex: 1 0 auto;
 }
 .nav{
     display: flex;
@@ -154,20 +155,24 @@ body{
     letter-spacing: 0.2px;
     color: #000000;
 }
-.inputText{
-    margin-top: 35px;
-    font-size: 16px;
-    padding-left: 32px;
-    padding-right: 202px;
-    width: 300px;
-    height: 73px;
-    left: 122px;
+/******/
+.input_Button{
+    width: 502px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    padding: 8px;
     border-radius: 8px;
+    margin-top: 50px;
+}
+.inputText{
+    display: block;
+    padding: 0 16px 0 24px;
+    flex: 1;
     border-style: none;
 }
 .button2{
-    position: relative;
-    left: -147px;
     background-color: #F84646;
     width: 136px;
     height: 61px;
@@ -175,6 +180,7 @@ body{
     border: none;
     color: #FFFFFF;
 }
+/********/
 .button2:hover{
     background: #971919;
     cursor: pointer;
@@ -243,7 +249,7 @@ body{
     margin-top: 20px;
     letter-spacing: 0.2px;
 }
-.inputText{
+/*.inputText{
     margin-top: 35px;
     font-size: 16px;
     padding-left: 32px;
@@ -631,144 +637,6 @@ body{
     margin-left: auto;
 }
 /*Media*/
-@media only screen and (max-width: 1024px){
-    /*Header*/
-    .sectionHeader{
-        width: 100%;
-    }
-    .nav_lin{
-        margin: 0 10px;
-    }
-    .images{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .title_text{
-        width: 100%;
-    }
-    .hText{
-        font-size: 56px;
-        font-weight: 800;
-        line-height: 73px;
-    }
-    .hText1{
-        font-size: 16px;
-        line-height: 28px;
-        width: 565px;
-    }
-    .inputText{
-        padding-left: 21px;
-        width: 220px;
-        height: 60px;
-        padding-right: 164px;
-        font-size: 14px;
-    }
-    .button2{
-        width: 114px;
-        height: 50px;
-    }
-    /*Images*/
-    .images p{
-        padding: 0 70px;
-    }
-    /*Red Container*/
-    .title_in_section{
-        width: 100%;
-    }
-    .container_1{
-        width: 100%;
-    }
-    .all_text_con{
-       padding: 0 160px;
-    }
-    .text_c{
-        margin-left: 20px;
-    }
-    .text_v{
-        margin-right: 10px;
-    }
-    .title_con{
-        width: 100%;
-    }
-    .text_1 p{
-        font-size: 14px;
-        line-height: 21px;
-    }
-    .text_1 img{
-        width: 28px;
-    }
-    .text_1{
-        width: 170px;
-    }
-    .tex{
-        margin: 0;
-    }
-    /*News*/
-    .news{
-        padding: 0 60px;
-    }
-    .first_news{
-        width: 100%;
-    }
-    .second_news{
-        width: 100%;
-    }
-    .news img{
-
-        width: 424px;
-        height: 404px;
-    }
-    .news h1{
-        font-size: 58px;
-        margin-bottom: 20px;
-    }
-    .news p{
-        font-size: 14px;
-    }
-    .news button{
-        margin-top: 32px;
-    }
-    .text_block_2{
-        padding-left: 56px;
-    }
-    /*Ad*/
-    .block{
-        width: 100%;
-    }
-    .second_img{
-        margin-left: -25px;
-    }
-    .third_img{
-        margin-left: -25px;
-    }
-    .fourth_img{
-        margin-left: -25px;
-    }
-    /*User*/
-    .user_title h1{
-        font-size: 48px;
-        line-height: 32px;
-    }
-    /*Footer*/
-    .footer_link{
-        max-width: 100%;
-    }
-    .lin{
-        padding-left: 30px;
-    }
-    .down_text{
-        max-width: 94%;
-        padding: 0 30px;
-    }
-}
-@media only screen and (max-width: 576px){
-    .images{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-
 @media only screen and (max-width: 576px){
     /*Header*/
     .sectionHeader{
@@ -857,6 +725,7 @@ body{
     /*******************************************/
 
     .input_Button{
+        width: 335px;
         text-align: center;
         margin: 0 auto;
     }
@@ -864,8 +733,6 @@ body{
     .inputText{
         padding-left: 21px;
         width: 150px;
-        height: 60px;
-        padding-right: 164px;
         font-size: 14px;
     }
 
@@ -927,6 +794,7 @@ body{
     .images{
         width: 100%;
         margin: 0 auto;
+        grid-template-columns: 1fr;
     }
     /*Red Container*/
     .red_container{
@@ -947,7 +815,7 @@ body{
     }
     .all_text_con{
         width: 100%;
-        padding-left: 0;
+        padding: 0;
         margin-top: 80px;
         flex-direction: column;
         text-align: center;
@@ -969,6 +837,9 @@ body{
         margin-bottom: 20px;
     }
     /*News*/
+    .news{
+        padding: 0;
+    }
     .first_news{
         width: 100%;
         text-align: center;
@@ -1128,5 +999,160 @@ body{
     .text_d{
         order: 1;
         padding: 0 160px 67px 0;
+    }
+}
+@media only screen and (min-width: 1024px ){
+    /*Header*/
+    .sectionHeader{
+        width: 100%;
+    }
+    .nav_lin{
+        margin: 0 10px;
+    }
+     .menu li{
+         flex: 0 1 auto;
+     }
+    .images{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .title_text{
+        width: 100%;
+    }
+    .hText{
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 73px;
+    }
+    .hText1{
+        font-size: 16px;
+        line-height: 28px;
+        width: 565px;
+    }
+    .input_Button{
+        width: 422px;
+    }
+    .inputText{
+        padding-left: 21px;
+        width: 220px;
+        font-size: 14px;
+    }
+    .button2{
+        width: 114px;
+        height: 50px;
+    }
+    /*Images*/
+    .images p{
+        padding: 0 70px;
+    }
+    /*Red Container*/
+    .title_in_section{
+        width: 100%;
+    }
+    .container_1{
+        width: 100%;
+    }
+    .all_text_con{
+        padding: 0 160px;
+    }
+    .text_c{
+        margin-left: 20px;
+    }
+    .text_v{
+        margin-right: 10px;
+    }
+    .title_con{
+        width: 100%;
+    }
+    .text_1 p{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .text_1 img{
+        width: 28px;
+    }
+    .text_1{
+        width: 170px;
+    }
+    .tex{
+        margin: 0;
+    }
+    /*News*/
+    .news{
+        padding: 0 60px;
+    }
+    .first_news{
+        width: 100%;
+    }
+    .second_news{
+        width: 100%;
+    }
+    .news img{
+
+        width: 424px;
+        height: 404px;
+    }
+    .news h1{
+        font-size: 58px;
+        margin-bottom: 20px;
+    }
+    .news p{
+        font-size: 14px;
+    }
+    .news button{
+        margin-top: 32px;
+    }
+    .text_block_2{
+        padding-left: 56px;
+    }
+    /*Ad*/
+    .block{
+        width: 100%;
+    }
+    .second_img{
+        margin-left: -25px;
+    }
+    .third_img{
+        margin-left: -25px;
+    }
+    .fourth_img{
+        margin-left: -25px;
+    }
+    /*User*/
+    .user_title h1{
+        font-size: 48px;
+        line-height: 32px;
+    }
+    /*Footer*/
+    .footer_link{
+        max-width: 100%;
+    }
+    .lin{
+        padding-left: 30px;
+    }
+    .down_text{
+        max-width: 94%;
+        padding: 0 30px;
+    }
+}
+@media (max-width: 576px) {
+    .Container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .Container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .Container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .Container {
+        max-width: 1140px;
     }
 }
