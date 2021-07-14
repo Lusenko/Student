@@ -11,7 +11,7 @@ body{
 }
 /*Header*/
 
-.headerImg{
+.header_image{
     max-width: 100%;
     background: url("image/Rectangle 1.png");
     background-size: cover;
@@ -20,7 +20,7 @@ body{
 .container{
     width: 100%;
 }
-.sectionHeader{
+.section_eader{
     width: 100%;
     margin: 0 auto;
 }
@@ -629,7 +629,7 @@ body{
 /*Media*/
 @media only screen and (max-width: 1024px){
     /*Header*/
-    .sectionHeader{
+    .section_header{
         width: 100%;
     }
     .nav_lin{
@@ -865,7 +865,7 @@ body{
 }
 @media only screen and (max-width: 576px){
     /*Header*/
-    .sectionHeader{
+    .section_header{
         width: 335px;
     }
     .nav{
@@ -963,7 +963,7 @@ body{
         font-size: 14px;
     }
 
-    .headerImg{
+    .header_image{
         height: 601px;
     }
     .headerInfo{
